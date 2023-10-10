@@ -18,7 +18,7 @@
   <property name="windowTitle">
    <string>First Demo</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="labDemo">
    <property name="geometry">
     <rect>
      <x>180</x>

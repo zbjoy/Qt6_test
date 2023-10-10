@@ -20,7 +20,7 @@ QT_BEGIN_NAMESPACE
 class Ui_Widget
 {
 public:
-    QLabel *label;
+    QLabel *labDemo;
     QPushButton *btnClose;
 
     void setupUi(QWidget *Widget)
@@ -31,13 +31,13 @@ public:
         QFont font;
         font.setPointSize(10);
         Widget->setFont(font);
-        label = new QLabel(Widget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(180, 80, 211, 121));
+        labDemo = new QLabel(Widget);
+        labDemo->setObjectName(QString::fromUtf8("labDemo"));
+        labDemo->setGeometry(QRect(180, 80, 211, 121));
         QFont font1;
         font1.setPointSize(15);
         font1.setBold(true);
-        label->setFont(font1);
+        labDemo->setFont(font1);
         btnClose = new QPushButton(Widget);
         btnClose->setObjectName(QString::fromUtf8("btnClose"));
         btnClose->setGeometry(QRect(240, 180, 131, 41));
@@ -54,7 +54,7 @@ public:
     void retranslateUi(QWidget *Widget)
     {
         Widget->setWindowTitle(QCoreApplication::translate("Widget", "First Demo", nullptr));
-        label->setText(QCoreApplication::translate("Widget", "Hello Qt6", nullptr));
+        labDemo->setText(QCoreApplication::translate("Widget", "Hello Qt6", nullptr));
         btnClose->setText(QCoreApplication::translate("Widget", "Close", nullptr));
     } // retranslateUi
 
