@@ -1,0 +1,9 @@
+C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/samp2_4.dir
+C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/samp2_4_autogen_timestamp_deps.dir
+C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/samp2_4_autogen.dir

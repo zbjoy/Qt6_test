@@ -1,0 +1,9 @@
+# ninja log v5
+3	552	7192480371565336	build.ninja	cb2584e138b72fd1
+2	913	7192480367276628	samp2_4_autogen/timestamp	176d7c5b4064c355
+2	913	7192480367276628	samp2_4_autogen/mocs_compilation.cpp	176d7c5b4064c355
+980	1098	7192480370501789	CMakeFiles/samp2_4.dir/samp2_4_autogen/EWIEGA46WW/qrc_res.cpp.obj	8f18b1f79354f811
+2	913	7192480367276628	C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Release/samp2_4_autogen/timestamp	176d7c5b4064c355
+2	913	7192480367276628	C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Release/samp2_4_autogen/mocs_compilation.cpp	176d7c5b4064c355
+914	976	7192480369268328	C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Release/samp2_4_autogen/EWIEGA46WW/qrc_res.cpp	6f3394cb868b70a6
+914	976	7192480369268328	samp2_4_autogen/EWIEGA46WW/qrc_res.cpp	6f3394cb868b70a6

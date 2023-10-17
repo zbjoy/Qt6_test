@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-4cad47d871989d036894.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "samp2_4",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "samp2_4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-samp2_4-Debug-0206cf074db4964e6e34.json",
+					"name" : "samp2_4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "samp2_4_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-samp2_4_autogen-Debug-e8819547a338bdf3bcc0.json",
+					"name" : "samp2_4_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "samp2_4_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-samp2_4_autogen_timestamp_deps-Debug-28861f92c177b80f5540.json",
+					"name" : "samp2_4_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug",
+		"source" : "C:/Users/dell/Desktop/qt6/Qt6_test/samp2_4"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

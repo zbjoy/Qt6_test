@@ -1,0 +1,19 @@
+{
+	"BUILD_DIR" : "C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/samp2_4_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/dell/Desktop/qt6/Qt6_test/samp2_4",
+	"CMAKE_SOURCE_DIR" : "C:/Users/dell/Desktop/qt6/Qt6_test/samp2_4",
+	"INCLUDE_DIR" : "C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/samp2_4_autogen/include",
+	"INPUTS" : [],
+	"LOCK_FILE" : "C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/samp2_4_autogen.dir/AutoRcc_res_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "res" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_res.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt6/6.2.4/mingw_64/./bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Users/dell/Desktop/qt6/Qt6_test/build-samp2_4-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/CMakeFiles/samp2_4_autogen.dir/AutoRcc_res_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Users/dell/Desktop/qt6/Qt6_test/samp2_4/res.qrc",
+	"VERBOSITY" : 0
+}
