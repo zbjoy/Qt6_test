@@ -3,5 +3,6 @@
         <file>image/MainScene.jpg</file>
         <file>image/MainStart.png</file>
         <file>image/MainExit.png</file>
+        <file>image/PlayScene_River.png</file>
     </qresource>
 </RCC>

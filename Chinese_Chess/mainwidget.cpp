@@ -61,7 +61,7 @@ void MainWidget::iniUI()
 
 }
 
-void MainWidget::initChssMap(int ChessMap[][COL])
+void MainWidget::initChssMap(Chess ChessMap[][COL])
 {
     for (int i = 0; i < ROW; i++)
     {
@@ -71,22 +71,22 @@ void MainWidget::initChssMap(int ChessMap[][COL])
             {
                 if (i == 0)
                 {
-                    ChessMap[i][j] = 3;
+                    ChessMap[i][j].type = 3;
                 }
                 else
                 {
-                    ChessMap[i][j] = 10;
+                    ChessMap[i][j].type = 10;
                 }
             }
             else if (((i == 0 || i == ROW - 1) && j == 1) || ((i == 0 || i == ROW - 1) && j == COL - 2))
             {
                 if (i == 0)
                 {
-                    ChessMap[i][j] = 4;
+                    ChessMap[i][j].type = 4;
                 }
                 else
                 {
-                    ChessMap[i][j] = 11;
+                    ChessMap[i][j].type = 11;
                 }
 
             }
@@ -94,60 +94,60 @@ void MainWidget::initChssMap(int ChessMap[][COL])
             {
                 if (i == 0)
                 {
-                    ChessMap[i][j] = 5;
+                    ChessMap[i][j].type = 5;
                 }
                 else
                 {
-                    ChessMap[i][j] = 12;
+                    ChessMap[i][j].type = 12;
                 }
             }
             else if (((i == 0 || i == ROW - 1) && j == 3) || ((i == 0 || i == ROW - 1) && j == COL - 4))
             {
                 if (i == 0)
                 {
-                    ChessMap[i][j] = 6;
+                    ChessMap[i][j].type = 6;
                 }
                 else
                 {
-                    ChessMap[i][j] = 13;
+                    ChessMap[i][j].type = 13;
                 }
             }
             else if (((i == 0 || i == ROW - 1) && j == 4))
             {
                 if (i == 0)
                 {
-                    ChessMap[i][j] = 7;
+                    ChessMap[i][j].type = 7;
                 }
                 else
                 {
-                    ChessMap[i][j] = 14;
+                    ChessMap[i][j].type = 14;
                 }
             }
             else if ((i == 3 || i == ROW - 4) && (j == 0 || j == 2 || j == 4 || j == 6 || j == 8 || j == 10))
             {
                 if (i == 3)
                 {
-                    ChessMap[i][j] = 1;
+                    ChessMap[i][j].type = 1;
                 }
                 else
                 {
-                    ChessMap[i][j] = 8;
+                    ChessMap[i][j].type = 8;
                 }
             }
             else if ((i == 2 || i == ROW - 3) && (j == 1 || j == COL - 2))
             {
                 if (i == 2)
                 {
-                    ChessMap[i][j] = 2;
+                    ChessMap[i][j].type = 2;
                 }
                 else
                 {
-                    ChessMap[i][j] = 9;
+                    ChessMap[i][j].type = 9;
                 }
             }
             else
             {
-                ChessMap[i][j] = 0;
+                ChessMap[i][j].type = 0;
             }
 
         }

@@ -6,6 +6,7 @@
 #include <QPushButton>
 
 #include "playscene.h"
+#include "chess.h"
 
 #ifndef PLAYSCENE_SIZE
 #define PLAYSCENE_SIZE
@@ -36,9 +37,9 @@ public:
 
     PlayScene* playScene = nullptr;
 
-    int ChessMap[ROW][COL];
+    Chess ChessMap[ROW][COL];
 
-    void initChssMap(int ChessMap[ROW][COL]);
+    void initChssMap(Chess ChessMap[ROW][COL]);
 
     ~MainWidget();
 

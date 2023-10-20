@@ -5,6 +5,10 @@
 #include <QPushButton>
 #include <QPainter>
 #include <QLabel>
+#include <QMouseEvent>
+
+#include "chess.h"
+#include "Move.h"
 
 #ifndef PLAYSCENE_SIZE
 #define PLAYSCENE_SIZE
@@ -26,25 +30,38 @@ class PlayScene : public QWidget
 {
     Q_OBJECT
 public:
-    explicit PlayScene(int ChessMap[][COL], QWidget *parent = nullptr);
+    explicit PlayScene(Chess ChessMap[][COL], QWidget *parent = nullptr);
 
     //PlayScene(int ChessMap[][COL]);
 
-    void iniUI();
+    void iniUI(); //界面初始化
 
-    void paintEvent(QPaintEvent *);
+    void paintEvent(QPaintEvent *); //绘图函数
 
-    void GameDraw(QPainter& painter);
+    void GameDraw(QPainter& painter); //初始化棋盘和绘制ChessMap中的棋子
 
-    void ChessCheck(int ChessMap[][COL]);
+    void ChessCheck(Chess ChessMap[][COL]); //遍历并有QPainter画出象棋样子
 
-    void initialChess(int ChessMap[][COL]);
+    void ChessCheck_Big(Chess ChessMap[][COL], int x, int y);
 
-    int ChessMap[ROW][COL];
+    void initialChess(Chess ChessMap[][COL]); //把MainWidget中的ChessMap数据复制到类成员this->ChessMap中
+
+    void mousePressEvent(QMouseEvent *e);
+
+    bool ChessMove(Chess ChessMap[][COL], int i, int j);
+
+    Chess ChessMap[ROW][COL]; //维护象棋数据
+
+    int Checked_Row;
+    int Checked_Col;
+
+    bool Player;
+
+    bool Checked;
 
 signals:
 
-    void PlaySceneBack();
+    void PlaySceneBack(); //发送返回信号给MainWidget中的MainScene_Exit
 };
 
 #endif // PLAYSCENE_H
