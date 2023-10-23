@@ -4,5 +4,7 @@
         <file>image/MainStart.png</file>
         <file>image/MainExit.png</file>
         <file>image/PlayScene_River.png</file>
+        <file>image/WindowIcon.png</file>
+        <file>image/RedWin.png</file>
     </qresource>
 </RCC>

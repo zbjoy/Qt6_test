@@ -23,6 +23,8 @@ MainWidget::~MainWidget()
 
 void MainWidget::iniUI()
 {
+    this->setWindowIcon(QIcon(":/MainImage/image/WindowIcon.png"));
+
     this->setFixedSize(500, 700);
     QLabel* mainImage = new QLabel(this);
     mainImage->setGeometry(0, 0, 500, 700);

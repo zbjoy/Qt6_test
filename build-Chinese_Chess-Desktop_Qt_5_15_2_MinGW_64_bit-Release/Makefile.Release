@@ -121,7 +121,9 @@ release/qrc_res.cpp: ../Chinese_Chess/res.qrc \
 		../Chinese_Chess/image/MainStart.png \
 		../Chinese_Chess/image/PlayScene_River.png \
 		../Chinese_Chess/image/MainScene.jpg \
-		../Chinese_Chess/image/MainExit.png
+		../Chinese_Chess/image/MainExit.png \
+		../Chinese_Chess/image/WindowIcon.png \
+		../Chinese_Chess/image/RedWin.png
 	C:\Qt6\5.15.2\mingw81_64\bin\rcc.exe -name res ..\Chinese_Chess\res.qrc -o release\qrc_res.cpp
 
 compiler_moc_predefs_make_all: release/moc_predefs.h
@@ -250,6 +252,13 @@ release/moc_mainwidget.cpp: ../Chinese_Chess/mainwidget.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtGui/qtextoption.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtGui/qpen.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtGui/QMouseEvent \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/QStack \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qstack.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/QPropertyAnimation \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qpropertyanimation.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qvariantanimation.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qeasingcurve.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qabstractanimation.h \
 		../Chinese_Chess/chess.h \
 		../Chinese_Chess/Move.h \
 		release/moc_predefs.h \
@@ -372,6 +381,13 @@ release/moc_playscene.cpp: ../Chinese_Chess/playscene.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/qframe.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtGui/QMouseEvent \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/QStack \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qstack.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/QPropertyAnimation \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qpropertyanimation.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qvariantanimation.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qeasingcurve.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qabstractanimation.h \
 		../Chinese_Chess/chess.h \
 		../Chinese_Chess/Move.h \
 		release/moc_predefs.h \
@@ -525,6 +541,13 @@ release/main.o: ../Chinese_Chess/main.cpp ../Chinese_Chess/mainwidget.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtGui/qtextoption.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtGui/qpen.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtGui/QMouseEvent \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/QStack \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qstack.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/QPropertyAnimation \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qpropertyanimation.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qvariantanimation.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qeasingcurve.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qabstractanimation.h \
 		../Chinese_Chess/chess.h \
 		../Chinese_Chess/Move.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/QApplication \
@@ -653,6 +676,13 @@ release/mainwidget.o: ../Chinese_Chess/mainwidget.cpp ../Chinese_Chess/mainwidge
 		C:/Qt6/5.15.2/mingw81_64/include/QtGui/qtextoption.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtGui/qpen.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtGui/QMouseEvent \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/QStack \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qstack.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/QPropertyAnimation \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qpropertyanimation.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qvariantanimation.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qeasingcurve.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qabstractanimation.h \
 		../Chinese_Chess/chess.h \
 		../Chinese_Chess/Move.h \
 		ui_mainwidget.h
@@ -774,6 +804,13 @@ release/playscene.o: ../Chinese_Chess/playscene.cpp ../Chinese_Chess/playscene.h
 		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/qframe.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtGui/QMouseEvent \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/QStack \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qstack.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/QPropertyAnimation \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qpropertyanimation.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qvariantanimation.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qeasingcurve.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qabstractanimation.h \
 		../Chinese_Chess/chess.h \
 		../Chinese_Chess/Move.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtCore/QDebug

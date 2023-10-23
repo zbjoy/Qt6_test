@@ -6,6 +6,8 @@
 #include <QPainter>
 #include <QLabel>
 #include <QMouseEvent>
+#include <QStack>
+#include <QPropertyAnimation>
 
 #include "chess.h"
 #include "Move.h"
@@ -25,6 +27,27 @@
 #define PLAYSCENEBUTTON_BOTTOM_EXIT 360
 
 #endif
+
+class ChessHistory
+{
+public:
+
+    ChessHistory()
+    {
+        for(int i = 0; i <= ROW; i++)
+        {
+            for(int j = 0; j < COL; j++)
+            {
+                ChessTemp[i][j].Select = 0;
+                ChessTemp[i][j].type = 0;
+            }
+        }
+    }
+
+    Chess ChessTemp[ROW][COL];
+};
+
+
 
 class PlayScene : public QWidget
 {
@@ -50,10 +73,22 @@ public:
 
     bool ChessMove(Chess ChessMap[][COL], int i, int j);
 
+    int isGameOver(Chess ChessMap[][COL]); // 返回0则没有结束  其余参照成员isWin
+
+    void ChessReturn(); //悔棋
+
+    ChessHistory ChessTemp;//[ROW][COL]; //暂时记录悔棋数据    注意: 在connect中好像不能直接创建变量
+
+    QStack<ChessHistory> ChessBack;
+
     Chess ChessMap[ROW][COL]; //维护象棋数据
+
+    QLabel* winLabel;
 
     int Checked_Row;
     int Checked_Col;
+
+    int isWin; //0 继续  1 红赢   2 黑赢
 
     bool Player;
 
@@ -62,6 +97,8 @@ public:
 signals:
 
     void PlaySceneBack(); //发送返回信号给MainWidget中的MainScene_Exit
+
+    void PlayScenePlayAgain(); //把重新开始了的信号发给MainWidget
 };
 
 #endif // PLAYSCENE_H

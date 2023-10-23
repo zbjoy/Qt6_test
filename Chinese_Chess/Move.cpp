@@ -2,7 +2,7 @@
 
 bool RedBin_Move(int x, int y, const Chess ChessMap[][COL], int j, int i)
 {
-    if (j >= ROW / 2 && j < ROW - 1)
+    if (j >= ROW / 2 && j < ROW)
     {
         if (x == i + 1 && y == j && x < COL && (ChessMap[y][x].type == 0 || ChessMap[y][x].type >= 8))
         {
