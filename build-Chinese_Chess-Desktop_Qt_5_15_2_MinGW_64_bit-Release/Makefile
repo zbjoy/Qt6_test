@@ -251,8 +251,10 @@ Makefile: ../Chinese_Chess/Chinese_Chess.pro C:/Qt6/5.15.2/mingw81_64/mkspecs/wi
 		C:/Qt6/5.15.2/mingw81_64/mkspecs/features/yacc.prf \
 		C:/Qt6/5.15.2/mingw81_64/mkspecs/features/lex.prf \
 		../Chinese_Chess/Chinese_Chess.pro \
+		C:/Qt6/5.15.2/mingw81_64/lib/Qt5Multimedia.prl \
 		C:/Qt6/5.15.2/mingw81_64/lib/Qt5Widgets.prl \
 		C:/Qt6/5.15.2/mingw81_64/lib/Qt5Gui.prl \
+		C:/Qt6/5.15.2/mingw81_64/lib/Qt5Network.prl \
 		C:/Qt6/5.15.2/mingw81_64/lib/Qt5Core.prl \
 		C:/Qt6/5.15.2/mingw81_64/lib/qtmain.prl \
 		.qmake.stash \
@@ -440,8 +442,10 @@ C:/Qt6/5.15.2/mingw81_64/mkspecs/features/exceptions.prf:
 C:/Qt6/5.15.2/mingw81_64/mkspecs/features/yacc.prf:
 C:/Qt6/5.15.2/mingw81_64/mkspecs/features/lex.prf:
 ../Chinese_Chess/Chinese_Chess.pro:
+C:/Qt6/5.15.2/mingw81_64/lib/Qt5Multimedia.prl:
 C:/Qt6/5.15.2/mingw81_64/lib/Qt5Widgets.prl:
 C:/Qt6/5.15.2/mingw81_64/lib/Qt5Gui.prl:
+C:/Qt6/5.15.2/mingw81_64/lib/Qt5Network.prl:
 C:/Qt6/5.15.2/mingw81_64/lib/Qt5Core.prl:
 C:/Qt6/5.15.2/mingw81_64/lib/qtmain.prl:
 .qmake.stash:

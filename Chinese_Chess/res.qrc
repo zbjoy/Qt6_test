@@ -6,5 +6,8 @@
         <file>image/PlayScene_River.png</file>
         <file>image/WindowIcon.png</file>
         <file>image/RedWin.png</file>
+        <file>image/eat.mp3</file>
+        <file>image/move.mp3</file>
+        <file>image/move_1.mp3</file>
     </qresource>
 </RCC>

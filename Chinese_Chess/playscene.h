@@ -8,6 +8,7 @@
 #include <QMouseEvent>
 #include <QStack>
 #include <QPropertyAnimation>
+#include <QMediaPlayer>
 
 #include "chess.h"
 #include "Move.h"
@@ -83,7 +84,11 @@ public:
 
     Chess ChessMap[ROW][COL]; //维护象棋数据
 
-    QLabel* winLabel;
+    QLabel* winLabel; //胜利图片
+
+    QMediaPlayer* moveSound; //移动声音
+
+    QMediaPlayer* eatSound; //吃子声音
 
     int Checked_Row;
     int Checked_Col;

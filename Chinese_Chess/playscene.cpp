@@ -97,7 +97,7 @@ void initChssMap(Chess ChessMap[ROW][COL]) //怎么extern MainWidget中的initCh
 PlayScene::PlayScene(Chess ChessMap[][COL], QWidget *parent)
     : QWidget{parent}
 {
-
+    //winLabel->show();
     this->Player = true; //红色先走
     initialChess(ChessMap);
     iniUI();
@@ -123,12 +123,35 @@ void PlayScene::iniUI()
     btn_Back->move(650, 220);
     btn_Back->setText("悔棋");
 
-    connect(btn_Exit, QPushButton::clicked, [=](){
+    winLabel = new QLabel;
+    //winLabel->show();
+    QPixmap tmpPix;
+    tmpPix.load(":/MainImage/image/RedWin.png");
+    //winLabel->setGeometry(0,0,tmpPix.width(),tmpPix.height());
+    winLabel->setGeometry(600, 100, 100, 100);
+    winLabel->setPixmap(tmpPix);
+    winLabel->setParent(this);
+    winLabel->hide();
+
+    moveSound = new QMediaPlayer(this);
+    eatSound = new QMediaPlayer(this);
+    moveSound->setMedia(QMediaContent(QUrl("qrc:/MainImage/image/move_1.mp3")));
+    eatSound->setMedia(QMediaContent(QUrl("qrc:/MainImage/image/eat.mp3")));
+    moveSound->setVolume(50);
+    eatSound->setVolume(50);
+
+    connect(btn_Exit, QPushButton::clicked, [=](){ //退出按钮
         emit this->PlaySceneBack();
     });
 
-    connect(btn_Again, QPushButton::clicked, [=](){
+    connect(btn_Again, QPushButton::clicked, [=](){ //重新开始按钮
         emit this->PlayScenePlayAgain();
+
+        if(!winLabel->isHidden())
+        {
+            winLabel->hide();
+        }
+
         //initialChess(ChessMap);
         //ChessCheck(ChessMap);
         initChssMap(ChessMap);
@@ -142,7 +165,14 @@ void PlayScene::iniUI()
         update();
     });
 
-    connect(btn_Back, QPushButton::clicked,[=](){
+    connect(btn_Back, QPushButton::clicked,[=](){  //悔棋按钮
+
+//        if(winLabel->isHidden())
+//        {
+//        //winLabel->show();
+//            winLabel->hide();
+//        }
+
         ChessReturn();
 //        if(ChessBack.isEmpty())
 //        {
@@ -179,6 +209,11 @@ void PlayScene::ChessReturn()
 //                ChessMap[i][j].type = chesshistory1.ChessTemp[i][j].type;
 //            }
 //        }
+//        if(winLabel->isHidden())
+//        {
+//            //winLabel->show();
+//            winLabel->hide();
+//        }
         Player = !Player;
         isWin = 0;
         update();
@@ -197,6 +232,7 @@ void PlayScene::paintEvent(QPaintEvent *)
 
 void PlayScene::GameDraw(QPainter& painter)
 {
+    //winLabel->show();
     QPen pen;
     pen.setColor(QColor(Qt::black));
     pen.setWidth(2);
@@ -388,38 +424,53 @@ void PlayScene::ChessCheck(Chess ChessMap[][COL])
     }
     if(isWin == 1) //红赢了
     {
-        winLabel = new QLabel;
-        QPixmap tmpPix;
-        tmpPix.load(":/MainImage/image/RedWin.png");
-        winLabel->setGeometry(0,0,tmpPix.width(),tmpPix.height());
-        winLabel->setPixmap(tmpPix);
-        winLabel->setParent(this);
-        winLabel->move((this->width()-tmpPix.width())*0.5,-tmpPix.height());
+//        winLabel = new QLabel;
+//        //winLabel->show();
+//        QPixmap tmpPix;
+//        tmpPix.load(":/MainImage/image/RedWin.png");
+//        //winLabel->setGeometry(0,0,tmpPix.width(),tmpPix.height());
+//        winLabel->setGeometry(600, 100, 100, 100);
+//        winLabel->setPixmap(tmpPix);
+//        winLabel->setParent(this);
+        //winLabel->move((this->width()-tmpPix.width())*0.5,-tmpPix.height());
+        //winLabel->move(400, 400);
+        winLabel->move(650, 100);
+        winLabel->show();
+        ChessBack.clear();
         //将胜利图片移动下来
-        QPropertyAnimation * animation = new QPropertyAnimation(winLabel,"geometry");
+//        QPropertyAnimation * animation = new QPropertyAnimation(winLabel,"geometry");
 
-        //设置时间间隔
-        animation->setDuration(1000);
+//        //设置时间间隔
+//        animation->setDuration(1000);
 
-        //起始位置
-        animation->setStartValue(QRect(winLabel->x(),winLabel->y(),winLabel->width(),winLabel->height()));
+//        //起始位置
+//        animation->setStartValue(QRect(winLabel->x(),winLabel->y(),winLabel->width(),winLabel->height()));
 
-        //结束位置
-        animation->setEndValue(QRect(winLabel->x(),winLabel->y() + 300,winLabel->width(),winLabel->height()));
+//        //结束位置
+//        animation->setEndValue(QRect(winLabel->x(),winLabel->y() + 300,winLabel->width(),winLabel->height()));
 
-        //设置弹跳曲线
-        animation->setEasingCurve(QEasingCurve::OutBounce);
+//        //设置弹跳曲线
+//        animation->setEasingCurve(QEasingCurve::OutBounce);
 
-        //执行动画
-        animation->start();
+//        //执行动画
+//        winLabel->show();
+//        animation->start();
+
+        //_sleep(3000);
+
+        //animation->stop();
+
+        //winLabel->hide();
     }
     if(isWin == 2) //黑赢了
     {
-        qDebug() << "黑胜利";
-        QLabel* hah = new QLabel(this);
-        hah->setGeometry(0, 0, 500, 700);
-        hah->setPixmap(QPixmap(":/MainImage/image/RedWin.png").scaled(500, 700));
-
+        //qDebug() << "黑胜利";
+        //QLabel* hah = new QLabel(this);
+        //hah->setGeometry(0, 0, 500, 700);
+        //hah->setPixmap(QPixmap(":/MainImage/image/RedWin.png").scaled(500, 700));
+        winLabel->move(650, 550);
+        winLabel->show();
+        ChessBack.clear();
 //        while(true)
 //        {
 //            _sleep(5000);
@@ -576,8 +627,20 @@ void PlayScene::mousePressEvent(QMouseEvent *e)
 //                                    }
 //                                }
                                 ChessBack.push_back(chesshistory);
+
+                                if(ChessMap[i][j].type != 0)
+                                {
+                                    eatSound->play();
+                                }
+                                else
+                                {
+                                    moveSound->play();
+                                }
+
                                 ChessMap[i][j].type = ChessMap[Checked_Row][Checked_Col].type;
+
                                 ChessMap[Checked_Row][Checked_Col].type = 0;
+                                //moveSound->play(); /////////////////////////////////////////
                                 this->Player = !this->Player;
                             }
 
