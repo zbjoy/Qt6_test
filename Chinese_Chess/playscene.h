@@ -91,6 +91,8 @@ public:
 
     QRadioButton* btn_Complex;
 
+    QMediaPlayer* checkmateSound; //将军的声音
+
     QMediaPlayer* moveSound; //移动声音
 
     QMediaPlayer* eatSound; //吃子声音

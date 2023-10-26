@@ -9,5 +9,6 @@
         <file>image/eat.mp3</file>
         <file>image/move.mp3</file>
         <file>image/move_1.mp3</file>
+        <file>image/checkmate.mp3</file>
     </qresource>
 </RCC>

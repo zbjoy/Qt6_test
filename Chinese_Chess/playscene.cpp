@@ -139,10 +139,13 @@ void PlayScene::iniUI()
     winLabel->setParent(this);
     winLabel->hide();
 
+    checkmateSound = new QMediaPlayer(this);
     moveSound = new QMediaPlayer(this);
     eatSound = new QMediaPlayer(this);
+    checkmateSound->setMedia(QMediaContent(QUrl("qrc:/MainImage/image/checkmate.mp3")));
     moveSound->setMedia(QMediaContent(QUrl("qrc:/MainImage/image/move_1.mp3")));
     eatSound->setMedia(QMediaContent(QUrl("qrc:/MainImage/image/eat.mp3")));
+    checkmateSound->setVolume(100);
     moveSound->setVolume(50);
     eatSound->setVolume(50);
 
@@ -636,14 +639,10 @@ void PlayScene::mousePressEvent(QMouseEvent *e)
 //                                }
                                 ChessBack.push_back(chesshistory);
 
+                                bool isEat = false;
                                 if(ChessMap[i][j].type != 0)
-                                {
-                                    eatSound->play();
-                                }
-                                else
-                                {
-                                    moveSound->play();
-                                }
+                                isEat = true;
+
 
 //                                if(btn_Complex->isChecked()) //执行将军判断与绝杀判断
 //                                {
@@ -667,7 +666,29 @@ void PlayScene::mousePressEvent(QMouseEvent *e)
                                     bool isPlaySound = SpecialSound(ChessMap);
                                     if(isPlaySound) //播放声音
                                     {
-
+                                        checkmateSound->play();
+                                    }
+                                    else
+                                    {
+                                        if(isEat)
+                                        {
+                                            eatSound->play();
+                                        }
+                                        else
+                                        {
+                                            moveSound->play();
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if(isEat)
+                                    {
+                                        eatSound->play();
+                                    }
+                                    else
+                                    {
+                                        moveSound->play();
                                     }
                                 }
 
@@ -794,12 +815,12 @@ bool PlayScene::SpecialSound(Chess ChessMap[][COL])
 {
     if(Player && ChessMove(ChessMap, Jiang_Row, Jiang_Col))
     {
-        qDebug() << "将Jiang";
+        //qDebug() << "将Jiang";
         return true;
     }
     else if(!Player && ChessMove(ChessMap, Shuai_Row, Shuai_Col))
     {
-        qDebug() << "将Shuai";
+        //qDebug() << "将Shuai";
         return true;
     }
     return false;

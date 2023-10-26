@@ -8,7 +8,7 @@ MainWidget::MainWidget(QWidget *parent)
 {
     ui->setupUi(this);
 
-    initChssMap(ChessMap);
+   initChssMap(ChessMap);
 
     iniUI();
 

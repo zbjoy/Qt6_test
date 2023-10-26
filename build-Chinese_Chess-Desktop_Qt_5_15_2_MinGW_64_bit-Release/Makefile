@@ -227,7 +227,6 @@ Makefile: ../Chinese_Chess/Chinese_Chess.pro C:/Qt6/5.15.2/mingw81_64/mkspecs/wi
 		C:/Qt6/5.15.2/mingw81_64/mkspecs/features/qt_config.prf \
 		C:/Qt6/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.conf \
 		C:/Qt6/5.15.2/mingw81_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		C:/Qt6/5.15.2/mingw81_64/mkspecs/features/exclusive_builds.prf \
 		C:/Qt6/5.15.2/mingw81_64/mkspecs/features/toolchain.prf \
 		C:/Qt6/5.15.2/mingw81_64/mkspecs/features/default_pre.prf \
@@ -258,6 +257,7 @@ Makefile: ../Chinese_Chess/Chinese_Chess.pro C:/Qt6/5.15.2/mingw81_64/mkspecs/wi
 		C:/Qt6/5.15.2/mingw81_64/lib/Qt5Network.prl \
 		C:/Qt6/5.15.2/mingw81_64/lib/Qt5Core.prl \
 		C:/Qt6/5.15.2/mingw81_64/lib/qtmain.prl \
+		.qmake.stash \
 		C:/Qt6/5.15.2/mingw81_64/mkspecs/features/build_pass.prf \
 		../Chinese_Chess/res.qrc
 	$(QMAKE) -o Makefile ..\Chinese_Chess\Chinese_Chess.pro -spec win32-g++ "CONFIG+=qtquickcompiler"
@@ -418,7 +418,6 @@ C:/Qt6/5.15.2/mingw81_64/mkspecs/features/qt_functions.prf:
 C:/Qt6/5.15.2/mingw81_64/mkspecs/features/qt_config.prf:
 C:/Qt6/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.conf:
 C:/Qt6/5.15.2/mingw81_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 C:/Qt6/5.15.2/mingw81_64/mkspecs/features/exclusive_builds.prf:
 C:/Qt6/5.15.2/mingw81_64/mkspecs/features/toolchain.prf:
 C:/Qt6/5.15.2/mingw81_64/mkspecs/features/default_pre.prf:
@@ -449,6 +448,7 @@ C:/Qt6/5.15.2/mingw81_64/lib/Qt5Gui.prl:
 C:/Qt6/5.15.2/mingw81_64/lib/Qt5Network.prl:
 C:/Qt6/5.15.2/mingw81_64/lib/Qt5Core.prl:
 C:/Qt6/5.15.2/mingw81_64/lib/qtmain.prl:
+.qmake.stash:
 C:/Qt6/5.15.2/mingw81_64/mkspecs/features/build_pass.prf:
 ../Chinese_Chess/res.qrc:
 qmake: FORCE
