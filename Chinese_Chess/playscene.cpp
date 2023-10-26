@@ -123,6 +123,12 @@ void PlayScene::iniUI()
     btn_Back->move(650, 220);
     btn_Back->setText("悔棋");
 
+    btn_Complex = new QRadioButton(this);
+    btn_Complex->setChecked(false);
+    btn_Complex->resize(100, 60);
+    btn_Complex->move(670, 30);
+    btn_Complex->setText("更多特效");
+
     winLabel = new QLabel;
     //winLabel->show();
     QPixmap tmpPix;
@@ -183,6 +189,8 @@ void PlayScene::iniUI()
 //            qDebug() << ChessBack.size();
 //        }
     });
+
+    //connect(btn_Complex, QRadioButton::isChecked(), )
 
 }
 
@@ -637,9 +645,32 @@ void PlayScene::mousePressEvent(QMouseEvent *e)
                                     moveSound->play();
                                 }
 
+//                                if(btn_Complex->isChecked()) //执行将军判断与绝杀判断
+//                                {
+//                                    //qDebug() << "绝杀";
+//                                    bool isPlaySound = SpecialSound(ChessMap[Checked_Row][Checked_Col]);
+//                                    if(isPlaySound) //播放声音
+//                                    {
+
+//                                    }
+//                                }
+
                                 ChessMap[i][j].type = ChessMap[Checked_Row][Checked_Col].type;
 
                                 ChessMap[Checked_Row][Checked_Col].type = 0;
+
+                                if(btn_Complex->isChecked()) //执行将军判断与绝杀判断
+                                {
+                                    Checked_Row = i;
+                                    Checked_Col = j;
+                                    //qDebug() << "绝杀";
+                                    bool isPlaySound = SpecialSound(ChessMap);
+                                    if(isPlaySound) //播放声音
+                                    {
+
+                                    }
+                                }
+
                                 //moveSound->play(); /////////////////////////////////////////
                                 this->Player = !this->Player;
                             }
@@ -732,6 +763,8 @@ int PlayScene::isGameOver(Chess ChessMap[][COL])
             if(ChessMap[i][j].type == 7)
             {
                 ret = 1;
+                Shuai_Row = i;
+                Shuai_Col = j;
                 break;
             }
         }
@@ -748,9 +781,26 @@ int PlayScene::isGameOver(Chess ChessMap[][COL])
             if(ChessMap[i][j].type == 14)
             {
                 ret = 0;
+                Jiang_Row = i;
+                Jiang_Col = j;
                 break;
             }
         }
     }
     return ret;
+}
+
+bool PlayScene::SpecialSound(Chess ChessMap[][COL])
+{
+    if(Player && ChessMove(ChessMap, Jiang_Row, Jiang_Col))
+    {
+        qDebug() << "将Jiang";
+        return true;
+    }
+    else if(!Player && ChessMove(ChessMap, Shuai_Row, Shuai_Col))
+    {
+        qDebug() << "将Shuai";
+        return true;
+    }
+    return false;
 }

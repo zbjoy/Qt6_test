@@ -9,6 +9,7 @@
 #include <QStack>
 #include <QPropertyAnimation>
 #include <QMediaPlayer>
+#include <QRadioButton>
 
 #include "chess.h"
 #include "Move.h"
@@ -78,6 +79,8 @@ public:
 
     void ChessReturn(); //悔棋
 
+    bool SpecialSound(Chess ChessMap[][COL]); //特效声音是否播放的判断
+
     ChessHistory ChessTemp;//[ROW][COL]; //暂时记录悔棋数据    注意: 在connect中好像不能直接创建变量
 
     QStack<ChessHistory> ChessBack;
@@ -86,12 +89,20 @@ public:
 
     QLabel* winLabel; //胜利图片
 
+    QRadioButton* btn_Complex;
+
     QMediaPlayer* moveSound; //移动声音
 
     QMediaPlayer* eatSound; //吃子声音
 
     int Checked_Row;
     int Checked_Col;
+
+    int Jiang_Row;
+    int Jiang_Col;
+
+    int Shuai_Row;
+    int Shuai_Col;
 
     int isWin; //0 继续  1 红赢   2 黑赢
 

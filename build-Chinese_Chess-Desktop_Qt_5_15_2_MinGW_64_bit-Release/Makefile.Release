@@ -281,6 +281,8 @@ release/moc_mainwidget.cpp: ../Chinese_Chess/mainwidget.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qmetaobject.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtMultimedia/qaudio.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtNetwork/qnetworkconfiguration.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/QRadioButton \
+		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/qradiobutton.h \
 		../Chinese_Chess/chess.h \
 		../Chinese_Chess/Move.h \
 		release/moc_predefs.h \
@@ -429,6 +431,8 @@ release/moc_playscene.cpp: ../Chinese_Chess/playscene.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qmetaobject.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtMultimedia/qaudio.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtNetwork/qnetworkconfiguration.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/QRadioButton \
+		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/qradiobutton.h \
 		../Chinese_Chess/chess.h \
 		../Chinese_Chess/Move.h \
 		release/moc_predefs.h \
@@ -608,6 +612,8 @@ release/main.o: ../Chinese_Chess/main.cpp ../Chinese_Chess/mainwidget.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qmetaobject.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtMultimedia/qaudio.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtNetwork/qnetworkconfiguration.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/QRadioButton \
+		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/qradiobutton.h \
 		../Chinese_Chess/chess.h \
 		../Chinese_Chess/Move.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/QApplication \
@@ -762,6 +768,8 @@ release/mainwidget.o: ../Chinese_Chess/mainwidget.cpp ../Chinese_Chess/mainwidge
 		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qmetaobject.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtMultimedia/qaudio.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtNetwork/qnetworkconfiguration.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/QRadioButton \
+		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/qradiobutton.h \
 		../Chinese_Chess/chess.h \
 		../Chinese_Chess/Move.h \
 		../Chinese_Chess/ui_mainwidget.h \
@@ -916,6 +924,8 @@ release/playscene.o: ../Chinese_Chess/playscene.cpp ../Chinese_Chess/playscene.h
 		C:/Qt6/5.15.2/mingw81_64/include/QtCore/qmetaobject.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtMultimedia/qaudio.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtNetwork/qnetworkconfiguration.h \
+		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/QRadioButton \
+		C:/Qt6/5.15.2/mingw81_64/include/QtWidgets/qradiobutton.h \
 		../Chinese_Chess/chess.h \
 		../Chinese_Chess/Move.h \
 		C:/Qt6/5.15.2/mingw81_64/include/QtCore/QDebug
